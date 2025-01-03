@@ -6,7 +6,7 @@ export default function Map() {
 
   // Fetch pollution data from OpenWeatherMap
   const fetchPollutionData = async (latitude, longitude) => {
-    const API_KEY = "a9658e5bedfb27dc6793d4af63fb6b5b"; // Replace with your API key
+    const API_KEY = process.env.API_KEY
     const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude.toFixed(
       6
     )}&lon=${longitude.toFixed(6)}&appid=${API_KEY}`;
